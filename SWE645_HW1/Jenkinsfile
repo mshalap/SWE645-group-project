@@ -24,6 +24,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                bat'''
+                cd swe645_HW1
+                '''
                 script {
 
                   dockerImage = docker.build registry + ":$BUILD_NUMBER"
