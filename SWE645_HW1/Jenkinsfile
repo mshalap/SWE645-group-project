@@ -25,10 +25,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 script {
-			      bat'''
-                  cd swe645_HW1
-                  '''
-                  dockerImage = docker.build registry + ":$BUILD_NUMBER"
+			      
+                  dockerImage = docker.build(registry + ":$BUILD_NUMBER", "./SWE645_HW1/Dockerfile")
                 }
 
             }
