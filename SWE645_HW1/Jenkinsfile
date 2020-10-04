@@ -13,7 +13,7 @@ pipeline {
                 withAnt(installation: 'Ant1.10.8') {
                 		echo 'Ant stuff'
                         bat'''
-                        cd ~/workspace/swe645-hw2/swe645_HW1
+                        cd swe645_HW1
                         dir
                         ant war
                         '''
